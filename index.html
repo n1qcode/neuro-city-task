@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Task</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/slider.css">
+    <link rel="stylesheet" href="style/canvas.css">
+    <script src="js/slider.js" defer></script>
+    <script src="js/canvas.js" defer></script>
+    <script src="js/video.js" defer></script>
+    <script src="js/httpRequest.js" defer></script>
+    <script src="js/websockets.js" defer></script>
+    <script src="js/elems.js" defer></script>
+    <script src="js/rectangles.js" defer></script>
+</head>
+<body>
+
+<div class="slider">
+    <div class="item">
+        <div class="slideText">Задание № 1</div>
+        <div><p class="slideTextP">Реализован слайдер, остальные задания представлены на следующих слайдах. <br><br> Страница адаптирована под экран 1440*720, на остальных возможно будет криво отображаться, не стал тратить на это время. </p></div>
+    </div>
+
+    <div class="item">
+        <div class="slideText">Задание № 2</div>
+        <canvas id="myCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <div class="item">
+        <div class="slideText">Задание № 3</div>
+        <div>
+        <video class="video" width="480" height="270" onclick="this[this.paused ? 'play' : 'pause']()">
+            <source src="./video/video.webm" type='video/webm'/>
+        </video>
+            <div id="controls">
+                    <p class="time">00:00:000</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="slideText">Задание № 4</div>
+        <div class="btnGetData">
+            <button class="btn-get">Получить данные</button>
+            <p class="btn-get-p">Результат в консоли</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="slideText">Задание № 5</div>
+        <div class="btnGetData">
+            <button class="btn-post">Отправить данные</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="slideText">Задание № 6</div>
+        <div><p class="slideTextP">Лежит в отдельной папке task6</p></div>
+    </div>
+
+    <div class="item">
+        <div class="slideText">Задание № 7</div>
+        <div class="elems">
+            <button class="click-elems">Вызов элементов</button>
+            <div class="list-of-elems"></div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="slideText">Задание № 8</div>
+        <div class="elems-rec">
+            <div class="btn-rec">
+            <button class="click-rectangles">Вызов квадратиков</button>
+            </div>
+            <div class="list-of-rectangles"></div>
+        </div>
+    </div>
+
+    <a class="prev" onclick="minusSlide()">&#10094;</a>
+    <a class="next" onclick="plusSlide()">&#10095;</a>
+</div>
+
+<div class="slider-dots">
+    <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(4)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(5)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(6)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(7)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(8)"></span>
+</div>
+
+</body>
+</html>
